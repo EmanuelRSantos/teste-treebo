@@ -19,8 +19,8 @@ const TaskList = ({ onEdit }) => {
     };
 
     return (
-        <div>
-            <h2>Todas as suas tarefas:</h2>
+        <div className="bg-gray-50 p-6 rounded-md shadow-md">
+            <h2 className="text-2xl font-bold mb-4">Todas as suas tarefas:</h2>
             {tasks.map((task) => (
                 <TaskItem key={task.id} task={task} onEdit={onEdit} />
             ))}
