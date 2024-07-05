@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getTasks } from '../service/task.service';
 import TaskItem from './taskItem';
 
-const TaskList = () => {
+const TaskList = ({ onEdit }) => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {

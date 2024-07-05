@@ -1,7 +1,7 @@
 import React from 'react';
 import { deleteTask } from '../service/task.service';
 
-const TaskItem = (task, onEdit) => {
+const TaskItem = ({ task, onEdit }) => {
     const handleDelete = async () => {
         try {
             await deleteTask(task.id);
