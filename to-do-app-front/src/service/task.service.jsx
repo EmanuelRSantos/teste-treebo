@@ -14,10 +14,10 @@ export const createTask = (task) => {
     return axios.post(API_URL, task);
 };
 
-export const updatetask = (id, task) => {
+export const updateTask = (id, task) => {
     return axios.patch(`${API_URL}/${id}`, task);
 };
 
-export const deletetask = (id) => {
+export const deleteTask = (id) => {
     return axios.delete(`${API_URL}/${id}`);
 };

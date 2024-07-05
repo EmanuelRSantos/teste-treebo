@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createTask, updatetask } from '../service/task.service';
+import { createTask, updateTask } from '../service/task.service';
 
 const TaskForm = ({ taskToEdit, clearEdit }) => {
     const [task, setTask] = useState({ task: '', description: '' });
@@ -19,7 +19,7 @@ const TaskForm = ({ taskToEdit, clearEdit }) => {
         event.preventDefault();
         try {
             if (task.id) {
-                await updatetask(task.id, task);
+                await updateTask(task.id, task);
             } else {
                 await createTask(task);
             }
